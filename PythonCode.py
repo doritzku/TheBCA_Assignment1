@@ -1,6 +1,6 @@
 from math import sqrt
 
-''' Hello folks'''
+''' Hello '''
 ''' Please Contribute'''
 
 # Example code
