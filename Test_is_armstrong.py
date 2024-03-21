@@ -22,7 +22,7 @@ class TestArmstrong(unittest.TestCase):
         
 
     def test_large_armstrong_number(self):
-        self.assertTrue(is_armstrong(9926315), "Armstrong Number")  # Testing a large armstrong number
+        self.assertTrue(is_armstrong(9926315))  # Testing a large armstrong number
 
     
 
