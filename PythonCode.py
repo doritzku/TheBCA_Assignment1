@@ -21,11 +21,19 @@ def prime_300(n):
                 return "Not a Prime Number"
         else:
             return "Prime Number"
+   
 
+def factorial(n):    
+    if not isinstance(n, int):
+        raise TypeError("Input must be an integer")
+    if n < 0:
+        raise ValueError("Input must be a positive integer")
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)   # using recursion
         
-           
-
-
-
+        
 if __name__== '__main__':
     print(prime_300(8))
+    print(factorial(5))

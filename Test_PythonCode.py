@@ -1,6 +1,6 @@
 import unittest
 from PythonCode import prime_300
-
+from PythonCode import factorial
 
 # test code for prime 300
 class TEST_prime_300(unittest.TestCase):
@@ -30,6 +30,25 @@ class TEST_prime_300(unittest.TestCase):
             prime_300(-7)
 
 #...
+# test code for factorial
+class Test_factorial(unittest.TestCase):
+    def test_factorial(self):
+        self.assertEqual(factorial(0), 1)  # Testing factorial of 0
+        self.assertEqual(factorial(1), 1)  # Testing factorial of 1
+        self.assertEqual(factorial(2), 2)  # Testing factorial of 2
+        self.assertEqual(factorial(3), 6)  # Testing factorial of 3
+        self.assertEqual(factorial(4), 24)  # Testing factorial of 4
+
+    def test_invalid_input_type(self):
+        with self.assertRaises(TypeError):  # Testing TypeError for non-integer input
+            factorial("hello")
+
+    def test_invalid_input_value(self):
+        with self.assertRaises(ValueError):  # Testing ValueError for negative input
+            factorial(-7)
+
+    def test_large_input(self):
+        self.assertEqual(factorial(10), 3628800)  # Testing factorial of 10
             
 if __name__== '__main__':
     unittest.main()
