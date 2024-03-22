@@ -4,3 +4,4 @@ Delve into our Git repository for Python unit test practice assignments. Strengt
 
 1. Added Prime number code with a test code
 2. Added code for finding Factorial with test code
+3. Added code for Prefix and Postfix with test code
