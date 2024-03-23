@@ -8,10 +8,9 @@ class TEST_forString(unittest.TestCase):
         self.assertEqual(getStringLenght("World"), true)
         self.assertEqual(getStringLenght("name"), true)
         
-
-    def test_not_string(self):
-        self.assertEqual(getStringLenght(1), "Not a Prime Number!!")
-        self.assertEqual(getStringLenght(["36"]), "Not a Prime Number")
+    def test_invalid_input_value(self):
+            with self.assertRaises(TypeError):
+                getStringLenght(1)
             
 if __name__== '__main__':
     unittest.main()
