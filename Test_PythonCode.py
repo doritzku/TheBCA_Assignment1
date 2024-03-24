@@ -1,37 +1,33 @@
 import unittest
-from PythonCode import prime_300
+from PythonCode import armstrong_500089748
 
+# Test code for Armstrong 500089748
+class Test_armstrong_500089748(unittest.TestCase):
+    def test_armstrong_number(self):
+        self.assertEqual(armstrong_500089748(153), "Armstrong Number")  # Testing Armstrong number 153
+        self.assertEqual(armstrong_500089748(370), "Armstrong Number")  # Testing Armstrong number 370
+        self.assertEqual(armstrong_500089748(9474), "Armstrong Number") # Testing Armstrong number 9474
 
-# test code for prime 300
-class TEST_prime_300(unittest.TestCase):
-    def test_prime_number(self):
-        self.assertEqual(prime_300(2), "Prime Number")  # Testing prime number 2
-        self.assertEqual(prime_300(3), "Prime Number")  # Testing prime number 3
-        self.assertEqual(prime_300(5), "Prime Number")  # Testing prime number 5
-        self.assertEqual(prime_300(7), "Prime Number")  # Testing prime number 7
-        self.assertEqual(prime_300(11), "Prime Number")  # Testing prime number 11
+    def test_not_armstrong_number(self):
+        self.assertEqual(armstrong_500089748(123), "Not an Armstrong Number")  # Testing non-Armstrong number 123
+        self.assertEqual(armstrong_500089748(12345), "Not an Armstrong Number")  # Testing non-Armstrong number 12345
 
-    def test_not_prime_number(self):
-        self.assertEqual(prime_300(1), "Not a Prime Number!!")  # Testing not prime number 1
-        self.assertEqual(prime_300(4), "Not a Prime Number")   # Testing not prime number 4
-        self.assertEqual(prime_300(6), "Not a Prime Number")   # Testing not prime number 6
-        self.assertEqual(prime_300(9), "Not a Prime Number")   # Testing not prime number 9
-        self.assertEqual(prime_300(15), "Not a Prime Number")  # Testing not prime number 15
-
-    def test_large_prime_number(self):
-        self.assertEqual(prime_300(104729), "Prime Number")  # Testing a large prime number
+    def test_single_digit_number(self):
+        self.assertEqual(armstrong_500089748(5), "Armstrong Number")  # Testing single digit Armstrong number 5
+        self.assertEqual(armstrong_500089748(9), "Armstrong Number")  # Testing single digit Armstrong number 9
 
     def test_invalid_input_type(self):
         with self.assertRaises(TypeError):  # Testing TypeError for non-integer input
-            prime_300("hello")
+            armstrong_500089748("hello")
 
     def test_invalid_input_value(self):
         with self.assertRaises(ValueError):  # Testing ValueError for negative input
-            prime_300(-7)
+            armstrong_500089748(-153)
 
-#...
-            
-if __name__== '__main__':
+# ...
+
+if __name__ == '__main__':
     unittest.main()
+
 
 
