@@ -1,3 +1,4 @@
+#Code written by Namra Tyagi, 500091016
 def gcd(a, b):
     """Calculate the greatest common divisor (GCD) of two numbers."""
     while b:
