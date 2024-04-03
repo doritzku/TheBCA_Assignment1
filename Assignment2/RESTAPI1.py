@@ -2,7 +2,7 @@ import requests
 
 #code is taken from geeksforgeeks
 
-api_key = "6b7d8996539a62d65e144936dd7c867f"
+api_key = "xxxxxxxxxxxxxxxxx"
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
  
 city_name = input("Enter city name : ")
